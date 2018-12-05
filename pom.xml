@@ -26,12 +26,7 @@
             <version>7.0</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>com.github.jsimone</groupId>
-            <artifactId>webapp-runner-main</artifactId>
-            <version>9.0.11.0</version>
-        </dependency>
-
+        
     </dependencies>
 
     <build>
@@ -43,9 +38,7 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
-                    <compilerArguments>
-                        <endorseddirs>${endorsed.dir}</endorseddirs>
-                    </compilerArguments>
+                    
                 </configuration>
             </plugin>
             <plugin>
