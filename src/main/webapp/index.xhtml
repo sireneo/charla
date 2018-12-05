@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form id="form1">
+            <h:panelGrid columns="3"  id="png">
+                <f:facet name="header">
+                    <p:messages id="msgs"/>
+                </f:facet>              
+                <p:outputLabel for="nombre" value="Nombre"/>
+                <p:inputText id="nombre" value="#{pruebaBean.nombres}" required="true" requiredMessage="Favor intrduzca un nombre"/> 
+                <p:message for="nombre" display="icon"/> 
+                <p:outputLabel for="apell" value="Apellido"/>
+                <p:inputText id="apell" value="#{pruebaBean.apell}" required="true" requiredMessage="Favor necesita un apellido"/>
+                <p:message for="apell" display="icon"/>
+                <p:commandButton update="form1" process="@form1" value="enviar" actionListener="#{pruebaBean.save()}" ajax="false" />
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+
